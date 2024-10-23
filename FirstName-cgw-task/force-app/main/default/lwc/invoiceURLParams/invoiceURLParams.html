@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Invoice URL Parameters">
+        <lightning-layout>
+            <lightning-layout-item>
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    <thead>
+                        <tr>
+                            <th scope="col">Parameter</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={urlParams} for:item="param">
+                            <tr key={param.key}>
+                                <td>{param.key}</td>
+                                <td>{param.value}</td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
