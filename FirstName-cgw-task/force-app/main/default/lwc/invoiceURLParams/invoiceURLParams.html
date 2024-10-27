@@ -1,24 +1,15 @@
 <template>
-    <lightning-card title="Invoice URL Parameters">
-        <lightning-layout>
-            <lightning-layout-item>
-                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
-                    <thead>
-                        <tr>
-                            <th scope="col">Parameter</th>
-                            <th scope="col">Value</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <template for:each={urlParams} for:item="param">
-                            <tr key={param.key}>
-                                <td>{param.key}</td>
-                                <td>{param.value}</td>
-                            </tr>
-                        </template>
-                    </tbody>
-                </table>
-            </lightning-layout-item>
-        </lightning-layout>
-    </lightning-card>
+  <lightning-card title="URL parameters">
+    <div class="slds-m-left_medium">
+    <div>Origin Record : {originRecord}</div>
+    <div>Account : {account}</div>
+    <div>Invoice Date : {invoiceDate}</div>
+    <div>Invoice Due Date : {invoiceDueDate}</div>
+    <div>Child Relationship Name : {childRelationshipName}</div>
+    <div>Line Item Description : {lineItemDescription}</div>
+    <div>Line Item Quantity : {lineItemQuantity}</div>
+    <div>Line Item Unit Price : {lineItemUnitPrice}</div></div>
+  </lightning-card>
 </template>
+
+
